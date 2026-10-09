@@ -1,0 +1,4 @@
+Fontes usadas (Noto Sans, variável):
+o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5a7duw.woff2   (latin)
+o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5aDdu2ui.woff2 (latin-ext)
+Os outros arquivos da pasta fonts/ da cópia antiga não são usados e podem ser apagados.

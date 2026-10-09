@@ -1,0 +1,14 @@
+Coloque aqui as imagens usadas pela página:
+
+FUNIL-WEBINAR-1-e1790800107199.webp         (1894 px, original)
+FUNIL-WEBINAR-1-e1790800107199-300x97.webp
+FUNIL-WEBINAR-1-e1790800107199-768x249.webp
+FUNIL-WEBINAR-1-e1790800107199-1024x332.webp
+FUNIL-WEBINAR-1-e1790800107199-1536x498.webp
+shape.webp                                  (risco embaixo do título dos nichos)
+cropped-favicon-davi-32x32.webp
+cropped-favicon-davi-192x192.webp
+cropped-favicon-davi-180x180.webp
+
+O banner e o favicon são de outra marca. Troque por imagens suas e,
+se mudar o nome do arquivo, ajuste o caminho no index.html.

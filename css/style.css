@@ -1,0 +1,121 @@
+/* ==========================================================
+   PÁGINA DE CAPTURA DA AULA
+   Organizado a partir do HTML exportado do Elementor.
+   Ordem: 1 fontes, 2 variáveis (cores e medidas), 3 base,
+   4 faixa do topo, 5 hero, 6 faixas rolando, 7 nichos,
+   8 botão, 9 tablet, 10 celular.
+   ========================================================== */
+
+/* 1. FONTES (arquivos locais em /fonts) */
+@font-face{font-family:'Noto Sans';font-style:normal;font-weight:100 900;font-stretch:100%;font-display:swap;
+  src:url(../fonts/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5aDdu2ui.woff2) format('woff2');
+  unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;}
+@font-face{font-family:'Noto Sans';font-style:normal;font-weight:100 900;font-stretch:100%;font-display:swap;
+  src:url(../fonts/o-0bIpQlx3QUlC5A4PNB6Ryti20_6n1iPHjc5a7duw.woff2) format('woff2');
+  unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}
+
+/* 2. VARIÁVEIS: troque as cores aqui e muda a página toda */
+:root{
+  --orange:#F04838;      /* laranja do logo: faixas, destaques, borda das tags */
+  --cream:#FFECD1;       /* texto da faixa laranja, fundo da faixa clara */
+  --green:#22cf5c;       /* botão */
+  --ink:#FFFFFF;         /* títulos (branco) */
+  --text:#FFFFFF;        /* texto corrido (branco) */
+  --chip-dark:#141414;   /* tags dos nichos (ímpares) */
+  --chip-grey:#2A2A2A;   /* tags dos nichos (pares) */
+  --bg:#000000;
+  --font:'Noto Sans',Arial,Helvetica,sans-serif;
+  --shape:url('../images/shape.webp');  /* risco embaixo do título dos nichos */
+  /* Para usar a paleta da ORKA (apresentação), troque por:
+     --cream:#F4F1EA; */
+}
+
+/* 3. BASE */
+*,*::before,*::after{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);font-size:1rem;line-height:1.5;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto;border:0}
+h1,h2,p,ul{margin:0;padding:0}
+
+/* 4. FAIXA DO TOPO (dia, hora, local) */
+.topbar{background:var(--orange);border-block:1px solid var(--cream);padding:14px}
+.topbar p{max-width:1140px;margin-inline:auto;text-align:center;font-size:25px;font-weight:700;line-height:1;color:var(--cream)}
+
+/* 5. HERO */
+.hero{min-height:850px;padding:90px 40px 100px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg)}
+.hero__inner{width:100%;max-width:1265px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px}
+.hero__text{width:80%;text-align:start}
+.hero__title{margin:.5rem 0 1rem;font-size:39px;font-weight:700;line-height:1.2;color:var(--ink)}
+.hero__title b{color:var(--orange)}
+.hero__desc{font-size:20px;font-weight:400;line-height:1.5;color:var(--text)}
+
+/* Bloco do botão + aviso (usado no hero e no final da página) */
+.cta{position:relative;z-index:99;width:100%;margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:20px}
+.cta__note{width:50%;margin-top:-5px;padding:0 50px;text-align:center;font-size:14px;font-weight:400;line-height:1.2;letter-spacing:-.2px;color:var(--ink)}
+
+/* 6. FAIXAS ROLANDO */
+.ticker{position:relative;overflow:hidden;margin-top:-50px;padding:12px 0;border-block:1px solid var(--cream)}
+.ticker--orange{z-index:5;background:var(--orange);color:var(--cream)}
+.ticker--cream{z-index:9;background:var(--cream);color:var(--orange);transform:rotate(-3deg)}
+.ticker__track{display:flex;width:max-content;white-space:nowrap;animation:ticker-right 20s linear infinite}
+.ticker--cream .ticker__track{animation-name:ticker-left}
+.ticker__item{padding-inline:16px;border-right:1px solid currentColor;font-size:20px;font-weight:400;line-height:1.5}
+/* 4 repetições do conjunto: -50% fecha o loop sem pulo */
+@keyframes ticker-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes ticker-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+/* 7. NICHOS */
+.niches{min-height:850px;padding:90px 40px 100px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg)}
+.niches__inner{width:100%;max-width:1140px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px}
+.niches__title{width:75%;margin:-43px 0 26px;text-align:center;font-size:36px;font-weight:700;line-height:22px;color:var(--ink)}
+.chips{list-style:none;position:relative;z-index:99;width:100%;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-start;gap:20px}
+.chip{padding:7px;border-radius:12px;background:var(--chip-dark);border:1px solid #333;color:#fff;font-family:Helvetica,Arial,sans-serif;font-size:32px;font-weight:500;line-height:1}
+.chip:nth-child(even){background:var(--chip-grey)}
+.chip--more{border:1px solid var(--orange);box-shadow:0 0 22px rgba(240,72,56,.5)}
+
+/* Risco embaixo do título dos nichos */
+@media (min-width:467px){
+  .dest{position:relative}
+  .dest::before{content:"";position:absolute;bottom:-5px;left:0;width:100%;height:20px;background:var(--shape) bottom center/contain no-repeat}
+}
+@media (max-width:767px){
+  .dest1{display:block;position:relative}
+  .dest1::before{content:"";position:absolute;bottom:-5px;left:0;width:100%;height:20px;background:var(--shape) bottom center/contain no-repeat}
+}
+
+/* 8. BOTÃO */
+.btn{display:inline-block;padding:13px 50px;border:1px solid #fff;border-radius:36.5px;background:var(--green);box-shadow:0 0 20px rgba(145,255,71,.3);color:#000;font-family:var(--font);font-size:20px;font-weight:700;line-height:1;text-align:center;text-decoration:none;transition:all .3s}
+.btn:hover{filter:brightness(1.2)}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+
+/* 9. TABLET (até 1024px) */
+@media (max-width:1024px){
+  .hero,.niches{min-height:244px;padding:20% 5%}
+  .hero__text{width:100%}
+  .cta__note{width:69%}
+}
+
+/* 10. CELULAR (até 767px) */
+@media (max-width:767px){
+  .topbar{padding:10px 14px}
+  .topbar p{margin-bottom:-1px;font-size:2.7vw;letter-spacing:-.1px}
+
+  .hero{min-height:0;padding:12% 3% 10%}
+  .hero__text{margin:-13px 0 -15px;padding:0 5px}
+  .hero__title{margin-bottom:14px;font-size:5.8vw}
+  .hero__desc{font-size:3.8vw}
+
+  .cta{margin-top:25px}
+  .hero .cta{margin-top:30px}
+  .btn{display:block;width:100%;margin-top:-13px;padding:15px 16px 16px;font-size:16px}
+  .cta__note{width:100%;margin-top:-10px;padding:0;font-size:12px}
+
+  .ticker{margin-top:0;padding:10px 0}
+  .ticker--cream{margin-top:-45px;transform:rotate(-8deg) scale(1.02)}
+  .ticker__item{font-size:16px}
+
+  .niches{min-height:0;padding:27% 5% 10%}
+  .niches__title{width:100%;margin:-50px 0 26px;font-size:4.6vw;line-height:1.2em}
+  .chips{width:96%;margin-top:20px}
+  .chip{border-radius:6px;font-size:3.5vw}
+}
