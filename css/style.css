@@ -39,7 +39,7 @@ h1,h2,p,ul{margin:0;padding:0}
 
 /* 4. FAIXA DO TOPO (dia, hora, local) */
 .topbar{background:var(--orange);border-block:1px solid var(--cream);padding:14px}
-.topbar p{max-width:1140px;margin-inline:auto;text-align:center;font-size:25px;font-weight:700;line-height:1;color:var(--cream)}
+.topbar p{max-width:1140px;margin-inline:auto;text-align:center;font-size:28px;font-weight:700;line-height:1;color:var(--cream)}
 
 /* 5. HERO */
 .hero{min-height:850px;padding:90px 40px 100px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg)}
