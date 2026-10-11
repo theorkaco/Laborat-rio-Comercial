@@ -57,7 +57,7 @@ src="https://www.facebook.com/tr?id=2984205511932606&ev=PageView&noscript=1"
         </div>
 
         <div class="cta">
-          <a class="btn" href="https://chat.whatsapp.com/CwWSyaBPHlkCArY6dXj4Zu?mode=gi_t">ENTRAR NO GRUPO</a>
+            <a class="btn" href="https://chat.whatsapp.com/CwWSyaBPHlkCArY6dXj4Zu?mode=gi_t" target="_blank" rel="noopener">ENTRAR NO GRUPO</a>
           <p class="cta__note">O botão leva direto para o grupo silencioso onde enviaremos o link do Meet. <b>Não precisa preencher formulário nem deixar e-mail</b></p>
         </div>
       </div>
@@ -101,7 +101,8 @@ src="https://www.facebook.com/tr?id=2984205511932606&ev=PageView&noscript=1"
         </ul>
 
         <div class="cta">
-          <a class="btn" href="https://chat.whatsapp.com/CwWSyaBPHlkCArY6dXj4Zu?mode=gi_t">ENTRAR NO GRUPO</a>
+
+          <a class="btn" href="https://chat.whatsapp.com/CwWSyaBPHlkCArY6dXj4Zu?mode=gi_t" target="_blank" rel="noopener">ENTRAR NO GRUPO</a>
           <p class="cta__note"><b>Não precisa deixar e-mail. Não precisa preencher WhatsApp.</b> O botão leva direto para o grupo silencioso da aula.</p>
         </div>
       </div>
@@ -157,10 +158,18 @@ src="https://www.facebook.com/tr?id=2984205511932606&ev=PageView&noscript=1"
 
 
         <div class="cta">
-          <a class="btn" href="https://chat.whatsapp.com/CwWSyaBPHlkCArY6dXj4Zu?mode=gi_t">ENTRAR NO GRUPO</a>
+            <a class="btn" href="https://chat.whatsapp.com/CwWSyaBPHlkCArY6dXj4Zu?mode=gi_t" target="_blank" rel="noopener">ENTRAR NO GRUPO</a>
           <p class="cta__note"><b>Não precisa deixar e-mail. Não precisa preencher WhatsApp.</b> O botão leva direto para o grupo silencioso da aula.</p>
         </div>
       </div>
+
+   <script>
+document.querySelectorAll('.btn').forEach(function(b){
+  b.addEventListener('click',function(){
+    if(window.fbq){ fbq('track','Lead'); }
+  });
+});
+</script>
     </section>
   </main>
 
